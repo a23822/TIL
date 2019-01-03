@@ -29,7 +29,10 @@ def solution2(participant, completion):
     answer = collections.Counter(participant) - collections.Counter(completion)
     return list(answer.keys())[0]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9e0efc8017eb7983f761764ccc4750de2580d002
 # ZIP 개념
 
 def solution3(participant, completion):
@@ -38,4 +41,8 @@ def solution3(participant, completion):
     for p, c in zip(participant, completion):
         if p != c:
             return p
+<<<<<<< HEAD
     return participant[-1]
+=======
+    return participant[-1]
+>>>>>>> 9e0efc8017eb7983f761764ccc4750de2580d002
