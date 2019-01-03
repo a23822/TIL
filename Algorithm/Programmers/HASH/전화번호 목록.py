@@ -50,20 +50,71 @@ def solution2(phone_book):
     return answer
 
 """
-진행중
+괜히 복잡하게 생각함
 """
 
-def solution(phone_book):
+def solution3(phone_book):
     
-    answer = True
-    
-    #번호 하나를 지정
-    for n in phone_book:
+    for i in range(len(phone_book)):
+        item = phone_book[i]
+        index = len(item)
         cnt = 0
-        arr = phone_book
-        arr.remove(n)
-        print(arr)
-        if n in arr:
-            cnt += 1
-        print(cnt)
+        for j in range(len(phone_book)):
+            item2 = phone_book[j]
+            #print("1번:"+item+"  2번:"+item2[:index])
+            if item == item2[:index]:
+                cnt += 1
+        if cnt > 1:
+            return False
+    return True
+
+"""
+일반적인 다른사람들의 풀이
+"""
+
+def solution4(phone_book):
+    phone_book.sort()
+    for i in range(len(phone_book)):
+        for j in range(len(phone_book)-i-1):
+            if phone_book[i] in phone_book[j+i+1]:
+                return False
+    return True
+
+"""
+regex??
+"""
+
+import re
+def solution5(phoneBook):
+
+    for b in phoneBook:
+        p = re.compile("^"+b)
+        for b2 in phoneBook:
+            if b != b2 and p.match(b2):
+                return False
+    return True
+
+"""
+string 정렬, 간단하지만 효율성테스트에서 느리다고 함.
+"""
+def solution6(phoneBook):
+    phoneBook = sorted(phoneBook)
+
+    for p1, p2 in zip(phoneBook, phoneBook[1:]):
+        if p2.startswith(p1):
+            return False
+    return True
+
+
+"""
+???
+"""
+
+from itertools import combinations as c
+def solution7(phoneBook):
+    answer = True
+    sortedPB = sorted(phoneBook, key= len)
+    for (a,b) in c( sortedPB,2):
+        if a == b[:len(a)]:
+            answer = False
     return answer
