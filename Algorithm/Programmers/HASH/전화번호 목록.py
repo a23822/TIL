@@ -51,6 +51,7 @@ def solution2(phone_book):
 
 """
 괜히 복잡하게 생각함
+어쨌든 정답
 """
 
 def solution3(phone_book):
