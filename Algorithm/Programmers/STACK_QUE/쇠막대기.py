@@ -17,19 +17,27 @@ def solution(arrangement):
             temp.append(p)
     print(temp)
     stack = 0
-    for i in temp:
-        if i == '(':
-            stack+=1
-        elif i == ')':
-            j = temp.index(i)
-            if temp[j+1] == '(':
-                stack += 1
-            elif temp[j+1] == ')':
+    temp2 = "("
+    while temp:
+        p = temp.pop(0)
+        if p == "l":
+            answer += stack
+        elif p == "(":
+            if temp2 ==")":
+                answer -= stack
+            stack += 1
+        else: # p == ")"
+            if temp2 == "l":
+                answer += stack
                 stack -= 1
-        elif i == 'l':
-            answer+= stack
-        print(stack)
-        
-    
+            elif temp2 == "(":
+                stack += 1
+            elif temp2 == ")":
+                stack -= 1
+
+        print("p는 {} temp2는 {}".format(p, temp2))
+        temp2 = p
+        print(temp)
+        print("stack 값은 {} 이고 answer은 {}".format(stack, answer))
     
     return answer
