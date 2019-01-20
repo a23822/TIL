@@ -10,7 +10,7 @@ def solution(numbers):
             dic[int(i[0])] = [i]
     # 각 값을 강제로 4자리수로 만들고 정렬한 뒤 원값을 차곡차곡 넣는다
     
-    for i in dic.values():
+    for i in dic.keys():
         
     print(dic)
     return answer
