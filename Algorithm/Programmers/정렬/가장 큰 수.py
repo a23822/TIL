@@ -8,9 +8,18 @@ def solution(numbers):
             dic[int(i[0])].append(i)
         else:
             dic[int(i[0])] = [i]
-    # 각 값을 강제로 4자리수로 만들고 정렬한 뒤 원값을 차곡차곡 넣는다
+    li = sorted(dic.items(), reverse=True)
     
-    for i in dic.keys():
-        
-    print(dic)
+    for i in range(len(li)):
+        comp = []
+        ref = []
+        for j in li[i][1]:
+            comp.append(int(j+str(li[i][0])*(4-len(j))))
+            ref.append(4-len(j))
+
+        while comp:
+            ref_p = ref.pop(comp.index(max(comp)))
+            p = comp.pop(comp.index(max(comp)))
+            p = int(p/10**ref_p)
+            answer+=str(p)
     return answer
