@@ -1,3 +1,8 @@
+"""
+테스트 케이스에서 틀림!!!!
+"""
+
+
 def solution(numbers):
     answer = ''
     temp = list(map(str, numbers))
