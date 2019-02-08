@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>새 영화 작성</title>
+    <!-- js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font|Do+Hyeon|Noto+Sans+KR" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <form class="w-50 mx-auto" action="/movies/create">
+          <div class="form-group my-5 mx-5">
+            <label for="title" style="font-family: 'Do Hyeon', sans-serif;">영화제목</label>
+            <input type="text" class="form-control"name="title"/>
+            <label for="title_en" style="font-family: 'Do Hyeon', sans-serif;">영화제목(영문)</label>
+            <input type="text" class="form-control"name="title_en"/>
+          </div>
+          <div class="form-group my-5 mx-5">
+            <label for="audience" style="font-family: 'Do Hyeon', sans-serif;">관객 누적 수</label>
+            <input type="text" class="form-control"name="audience"/>
+          </div>
+          <div class="form-group my-5 mx-5">
+            <label for="open_date" style="font-family: 'Do Hyeon', sans-serif;">개봉일</label>
+            <input type="text" class="form-control"name="open_date"/>
+          </div>
+          <div class="form-group my-5 mx-5">
+            <label for="genre" style="font-family: 'Do Hyeon', sans-serif;">장르</label>
+            <input type="text" class="form-control"name="genre"/>
+          </div>
+          <div class="form-group my-5 mx-5">
+            <label for="watch_grade" style="font-family: 'Do Hyeon', sans-serif;">관람등급</label>
+            <input type="text" class="form-control"name="watch_grade"/>
+          </div>
+          <div class="form-group my-5 mx-5 slider_range">
+            <label for="score" style="font-family: 'Do Hyeon', sans-serif;">평점</label>
+            <select class="form-control" id="score" name="score" value="4">
+              <option>0</option>
+              <option>0.5</option>
+              <option>1</option>
+              <option>1.5</option>
+              <option>2</option>
+              <option>2.5</option>
+              <option>3</option>
+              <option>3.5</option>
+              <option>4</option>
+              <option>4.5</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group my-5 mx-5">
+            <label for="poster_url" style="font-family: 'Do Hyeon', sans-serif;">포스터URL</label>
+            <input type="text" class="form-control"name="poster_url"/>
+          </div>
+          <div class="form-group my-5 mx-5">
+            <label for="description" style="font-family: 'Do Hyeon', sans-serif;">영화소개</label>
+            <textarea name="description" class="form-control" cols="40" rows="8"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary my-5 mx-5">완료</button>
+        </form>
+    </div>
+    
+    <script language = "javascript">
+        var slider = new Slider('#score', {
+        	formatter: function(value) {
+        		return value;
+        	}
+        });
+    </script> 
+</body>
+</html>

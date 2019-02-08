@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>영화 상세보기</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font|Do+Hyeon|Noto+Sans+KR" rel="stylesheet">
+    <style type="text/css">
+     a:link { color: white; text-decoration: none;}
+     a:visited { color: white; text-decoration: none;}
+     a:hover { color: white; text-decoration: none;}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light my-5">
+          <a class="navbar-brand" href="/movies">HOME</a>
+        </nav>
+    </header>
+    <div class="card text-center my-2 w-50 mx-auto">
+      <div class="card-header" style="font-family: 'Do Hyeon', sans-serif;">
+        {{movie.title}} , {{movie.title_en}}
+      </div>
+      <div class="card-body">
+        <input class="mx-auto mt-2 mb-3 w-50" type="image" src="{{movie.poster_url}}" alt="기다리셈">
+        <div>
+            <p class="card-text" style="font-family: 'Noto Sans KR', sans-serif;">
+                관객 누적 수 : {{movie.audience}} <br/>
+                장르 : {{movie.genre}}
+            </p>
+            <p class="card-text text-right" style="font-family: 'Noto Sans KR', sans-serif;">
+                {{movie.watch_grade}}
+            </p>
+            <hr/>
+        </div>
+        <p class="card-text" style="font-family: 'Noto Sans KR', sans-serif;">{{movie.description}}</p>
+      </div>
+      <div class="card-footer text-muted d-flex justify-content-end">
+        {% if movie.score >= 4 %}
+            <p class="badge badge-primary text-wrap text-center text-white my-auto mx-3" style="width:3rem">{{movie.score}}</p>
+            {% else %}
+            <p class="badge badge-secondary text-wrap text-center text-white my-auto mx-3" style="width:3rem">{{movie.score}}</p>
+        {% endif %}
+        {{datemsg}} 개봉
+      </div>
+    </div>
+    
+    <footer class='mx-2 my-5 d-flex justify-content-center'>
+        <button type="button" class="btn btn-info mx-2"><a href="/movies">목록</a></button>
+        <button type="button" class="btn btn-primary mx-2"><a href="/movies/{{movie.id}}/edit">수정</a></button>
+        <button type="button" class="btn btn-danger mx-2"><a href="/movies/{{movie.id}}/delete">삭제</a></button>
+    </footer>
+</body>
+</html>
