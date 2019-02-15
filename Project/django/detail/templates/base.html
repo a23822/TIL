@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROJECT05</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <!--<link rel="shortcut icon" href= "{% static 'favicon.ico' %}"/>-->
+    <!--링크 밑줄, 파란색 없애기-->
+    <style type="text/css">
+        a.mystyle {
+            text-decoration:none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="top" class="navbar navbar-expand-lg navbar-light bg-secondary">
+      <a class="navbar-brand text-white font-weight-boldborder border-white border-right pr-4" href="/">My site</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link text-white" href="/qna">Q&A</a>
+          <div class="d-flex justify-content-end">
+              <a class="nav-item nav-link text-white" href="/mypage">My page</a>
+              <a class="nav-item nav-link text-white" href="/signup">SignUp</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+
+    
+    {% block body %}
+    
+    {% endblock %}
+    
+    <div class="d-inline d-flex justify-content-between fixed-bottom py-3 px-4 bg-secondary h-10">
+        <div class="d-inline text-white text-weight-bold" style="font-size: 1.2em">
+            SSAFY
+        </div>
+        <div class="d-inline" style="font-size: 1.2em">
+            <a href="#top" class="mystyle">상단으로 올라가기</a>
+        </div>
+        
+        
+    </div>
+    
+</body>
+</html>
