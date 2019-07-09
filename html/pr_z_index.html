@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div { width: 100px; height: 100px; color: white; }
+        .red, .blue { position: absolute; }
+        .green { position: relative; }
+        .red { z-index:5; }
+        .blue { z-index:6; }
+        .green { z-index:7; }
+        .orange { z-index:8; }
+    </style>
+</head>
+<body>
+        <div class="red" style="background: red;">RED</div>
+
+        <div class="blue" style="background: blue; margin-top: 30px; margin-left: 30px;">BLUE</div>
+        
+        <div class="green" style="background: green; margin-top: 60px; margin-left: 60px;">GREEN</div>
+        
+        <div class="orange" style="background: orange; margin-left: 90px;">ORANGE</div>                  
+    <!-- orange 는 position 이 기본값인 static 이기 때문에 z-index 가 반영이 안됨.!!!-->
+</body>
+</html>
