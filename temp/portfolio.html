@@ -170,77 +170,111 @@
                     <div id="form_cover">
                         <form>
                             <div>
-                                <label for="user_id">아이디</label>
+                                <label for="user_id"><h4>아이디</h4></label>
                                 <input type="text" id="user_id" name="user_id"/>
                             </div>
+
                             <div>
-                                <label for="password">비밀번호</label>
+                                <label for="password"><h4>비밀번호</h4></label>
                                 <input type="password" id="password" name="password"/>
                             </div>
                             <div>
-                                <label for="name">이름</label>
+                                <label for="name"><h4>이름</h4></label>
                                 <input type="text" id="name" name="username"/>
                             </div>
+
                             <div>
-                                <label for="birth">생년월일</label>
+                                <h4>생년월일</h4>
                                 <div id="select_cover">
-                                    <select id="year" name="year">
-                                        <option>1993년</option>
+                                    <select id="year" name="year" class="font-12px">
+                                        <option selected>년도</option>
                                     </select>
-                                    <select id="month" name="month">
-                                        <option>1월</option>
-                                        <option>2월</option>
-                                        <option>3월</option>
-                                        <option>4월</option>
-                                        <option>5월</option>
-                                        <option>6월</option>
-                                        <option>7월</option>
-                                        <option>8월</option>
-                                        <option>9월</option>
-                                        <option>10월</option>
-                                        <option>11월</option>
-                                        <option>12월</option>
+                                    <select id="month" name="month" class="font-12px">
+                                        <option selected>월</option>
                                     </select>
-                                    <select id="day" name="day">
-                                        <option>1일</option>
+                                    <select id="day" name="day" class="font-12px">
+                                        <option selected>일</option>
                                     </select>
                                 </div>
                             </div>
+
                             <div>
-                                <label for="gender">성별</label>
+                                <h4>성별</h4>
                                 <div id="radio_cover">
                                     <input id="male" name="male" type="radio" value="남자"/>
-                                    <label for="male">남자</label>
+                                    <label for="male" class="font-12px">남자</label>
 
                                     <input id="female" name="female" type="radio" value="여자"/>
-                                    <label for="female">여자</label>
+                                    <label for="female" class="font-12px">여자</label>
                                 </div>
                             </div>
-                            <div>
-                                <label for="email">이메일</label>
+
+                            <div id="email_cover">
+                                <label for="email"><h4>이메일</h4></label>
                                 <input type="email" id="email" name="email" placeholder="이메일 주소에 &#39;@&#39;를 포함해주세요."/>
                             </div>
+
                             <div>
-                                <label for="phone">휴대전화</label>
+                                <label for="phone"><h4>휴대전화</h4></label>
                                 <div id="phone_cover">
                                     <input type="number" name="phone" placeholder="숫자만 입력해주세요."/>
                                     <a href="" class="font-12px">인증번호 받기</a>
                                 </div>
-                                <input type="number" name="certificate" placeholder="인증번호를 입력해주세요."/>
+                                <input type="number" id="certificate" name="certificate" placeholder="인증번호를 입력해주세요."/>
                             </div>
-                            <div>
-                                <label for="hobby">취미</label>
-                                <div>
 
+                            <div>
+                                <h4>취미</h4>
+                                <div id="checkbox_list">
+                                    <div class="checkbox_cover">    
+                                        <input type="checkbox" id="work_out" name="운동"/>
+                                        <label for="work_out">운동</label>
+                                    </div>
+
+                                    <div class="checkbox_cover">
+                                        <input type="checkbox" id="cook" name="요리"/>
+                                        <label for="cook">요리</label>
+                                    </div>
+
+                                    <div class="checkbox_cover">
+                                        <input type="checkbox" id="trip" name="여행"/>
+                                        <label for="trip">여행</label>
+                                    </div>
+
+                                    <div class="checkbox_cover">
+                                        <input type="checkbox" id="game" name="게임"/>
+                                        <label for="game">게임</label>
+                                    </div>
+
+                                    <div class="checkbox_cover">
+                                        <input type="checkbox" id="computer" name="컴퓨터"/>
+                                        <label for="computer">컴퓨터</label>
+                                    </div>
+
+                                    <div class="checkbox_cover">
+                                        <input type="checkbox" id="music" name="음악"/>
+                                        <label for="music">음악</label>
+                                    </div>
+
+                                    <div class="checkbox_cover">
+                                        <input type="checkbox" id="movie" name="영화"/>
+                                        <label for="movie">영화</label>
+                                    </div>
+
+                                    <div class="checkbox_cover">
+                                        <input type="checkbox" id="read" name="독서"/>
+                                        <label for="read">독서</label>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <label for="first_greeting">가입인사</label>
-                                <textarea name="first_greeting"></textarea>
+                            
+                            <div id="#greeting_cover">
+                                <label for="first_greeting"><h4>가입인사</h4></label>
+                                <textarea id="first_greeting" name="first_greeting"></textarea>
                             </div>
 
                             <div>
-                                <input type="submit" value="가입하기"/>
+                                <button type="submit" id="submit">가입하기</button>
                             </div>
                         </form>
                     </div>
@@ -255,9 +289,62 @@
         
     </main>
 
-    <footer>
+    <footer class="font-12px">
         <address>주소: 경기도 성남시 분당구. E-MAIL: honggildong@naver.com</address>
         <strong>Copyright &#169; Hong Gil Dong. All Rights Reserved</strong>
     </footer>
+
+    <script>
+        var year_Arr = []
+        var month_Arr = []
+        var day_Arr = []
+
+        for (var i = 1; i < 90; i++) {
+            year_Arr.push(i+1930)
+            if (i<13) {
+                month_Arr.push(i)
+            }
+            if (i<32) {
+                day_Arr.push(i)
+            }
+        }
+
+        function addYear() {
+            var select_year = document.getElementById("year");
+            for (var i=0; i<year_Arr.length; i++) {
+                var option_year = document.createElement("option");
+                option_year.text = year_Arr[i] + '년';
+                option_year.value = year_Arr[i]
+    
+                select_year.options.add(option_year)
+            }
+        }
+
+        function addMonth() {
+            var select_month = document.getElementById("month");
+            for (var i=0; i<month_Arr.length; i++) {
+                var option_month = document.createElement("option");
+                option_month.text = month_Arr[i] + '월';
+                option_month.value = month_Arr[i]
+                
+                select_month.options.add(option_month)
+            }
+        }
+
+        function addDay() {
+            var select_day = document.getElementById("day");
+            for (var i=0; i<day_Arr.length; i++) {
+                var option_day = document.createElement("option");
+                option_day.text = day_Arr[i] + '일';
+                option_day.value = day_Arr[i]
+                
+                select_day.options.add(option_day)
+            }
+        }
+
+        addYear();
+        addMonth();
+        addDay();
+    </script>
 </body>
 </html>

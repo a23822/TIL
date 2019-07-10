@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body, header, nav, main, footer, ul, li, div, h1 {
+body, header, nav, main, footer, ul, li, div, h1, input, textarea {
     margin: 0;
     padding: 0;
 }
@@ -13,15 +13,13 @@ body {
     font-size: 12px;
 }
 
-.font-14px {
-    font-size: 14px;
-}
-
-.font-16px {
-    font-size: 16px;
-}
-
 h3 {
+    font-size:14px;
+    font-weight: bold;
+    color: #000;
+}
+
+h4 {
     font-size:14px;
     font-weight: bold;
     color: #000;
@@ -141,7 +139,6 @@ main dd:last-of-type {
 footer {
     width: 100%;
     text-align: center;
-    font-size: 12px;
     padding: 30px 0 0 0;
 }
 
@@ -250,8 +247,8 @@ footer strong {
     font-size: 12px;
     color: #000;
     width: 100%;
-    padding: 5px 0;
     text-indent: 5px;
+    height: 24px;
 }
 
 #form_cover form {
@@ -260,6 +257,7 @@ footer strong {
 
 #form_cover form > div {
     margin-top: 20px;
+    width: 974px;
 }
 
 #form_cover label {
@@ -267,21 +265,29 @@ footer strong {
     margin-bottom: 5px;
 }
 
-/* TODO 이상함 */
 #select_cover {
-    width: 100%;
+    width: 978px;
 }
 
 #form_cover select {
     width: 310px;
-    font-size: 12px;
     color: #000;
-    border: 1px solid #000;
-    text-align: center;
+    height: 30px;
+    padding: 5px;
 }
 
 select:nth-of-type(2) {
-    margin: 0 5px;
+    position: relative;
+    top: 0; bottom:0;
+    left: 25px; right: 0;
+}
+
+#select_cover select:first-of-type {
+    float: left;
+}
+
+#select_cover select:last-of-type {
+    float: right;
 }
 
 #radio_cover {
@@ -291,32 +297,90 @@ select:nth-of-type(2) {
 #radio_cover label {
     display: inline;
     margin-right: 60px;
-    font-size:12px;
     color: #000;
 }
 
 #radio_cover input {
-    display:inline;
+    display:inline-block;
     width: 14px;
     padding: 0;
+    transform: translateY(2px);
+}
+
+#email_cover input {
+    height: 26px;
+    padding: 0;
+    width: 974px;
 }
 
 #phone_cover {
     display: block;
     padding: 0;
+    margin-bottom: 10px;
+    width: 978px;
 }
 
 #phone_cover > input {
-    width: 85%;
-    margin-right: 5px;
+    width: 820px;
 }
 
 #phone_cover a {
+    float:right;
     border: 1px solid #08a600;
     color: #fff;
     background-color: #08a600;
-    padding: 5px 10px;
+    padding:5px 0;
     text-decoration: none;
-    width: 10%;
+    width: 140px;
+    text-align: center;
+}
+
+#phone_cover + #certificate {
+    width: 974px;
+}
+
+.checkbox_cover {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    width: 60px;
     margin: 0 auto;
 }
+
+#checkbox_list {
+    width: 978px;
+}
+
+#checkbox_list .checkbox_cover {
+    display: inline-block;
+    margin-right: 56.5px;
+}
+
+#checkbox_list .checkbox_cover input {
+    width: 12px;
+    height: 12px;
+    vertical-align: -2px;
+}
+
+#checkbox_list .checkbox_cover label {
+    display: inline;
+}
+
+#first_greeting {
+    resize: none;
+    width: 976px;
+    height: 150px;
+    font-size: 12px;
+}
+
+#submit {
+    border: 1px solid #08a600;
+    background-color: #4ec53d;
+    font-size: 16px;
+    color: #fff;
+    height: 45px;
+    width: 978px;
+    padding: 0;
+}
+
+/* list component */
