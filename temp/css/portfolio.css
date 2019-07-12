@@ -34,7 +34,7 @@ h3 {
     font-weight: bold;
 }
 
-h4 {
+form div label {
     font-size:14px;
     font-weight: bold;
 }
@@ -78,13 +78,12 @@ nav {
 
 #nav_ul li {
     display: table-cell;
-    border: 1px solid #d1d1d1;
     height: 33px;
     text-align: center;
     list-style-type: none;
 }
 
-#nav_ul li:first-sof-type {
+#nav_ul li:first-of-type {
     margin-left: 40px;
 }
 
@@ -98,13 +97,13 @@ nav {
 
 #nav_ul li a {
     text-decoration: none;
-    color: #000;
     font-size: 16px;
     line-height: 2.2;
     display:block;
+    border: 1px solid #d1d1d1;
 }
 
-#nav_ul li:hover {
+#nav_ul a:hover {
     border: 1px solid #454545;
     font-weight: bold;
 }
@@ -122,7 +121,6 @@ main {
 main h2 {
     font-size: 20px;
     font-weight: bold;
-    color: #000;
     border-bottom: 1px solid #454545;
     padding: 0 0 20px 0;
 }
@@ -183,8 +181,11 @@ footer strong {
 /* 아동 사이즈 */
 
 #baby_size {
-    text-align: center;
     width: 100%;
+}
+
+#baby_size td {
+    text-align: center;
 }
 
 #baby_size tr {
@@ -224,16 +225,16 @@ footer strong {
 
 #ref_refundable {
     border-collapse: collapse;
-    text-align:center;
     width: 100%;
 }
 
-#ref_refundable th, ref_refundable td {
+#ref_refundable th, #ref_refundable td {
     padding: 10px 20px;
 }
 
 #ref_refundable thead td {
     width: 37%;
+    text-align: center;
 }
 
 #ref_refundable thead th, #ref_refundable tbody th {
@@ -256,6 +257,9 @@ footer strong {
     background-color: #fbfbfb;
     border-top: 1px solid #a5a5a5;
     border-bottom: 1px solid #e4e4e4;
+}
+
+#ref_refundable tfoot td {
     font-weight: bold;
 }
 
@@ -267,7 +271,6 @@ footer strong {
 
 #form_cover input {
     font-size: 12px;
-    color: #000;
     width: 896px;
     text-indent: 5px;
     height: 24px;
@@ -283,7 +286,7 @@ footer strong {
 }
 
 #form_cover label {
-    display: block;
+    display: inline-block;
     margin-bottom: 10px;
 }
 
@@ -296,7 +299,6 @@ footer strong {
 #form_cover select {
     margin-top: 10px;
     width: 290px;
-    color: #000;
     height: 30px;
     padding: 5px;
 }
@@ -420,6 +422,7 @@ select:nth-of-type(2) {
     height: 45px;
     width: 900px;
     padding: 0;
+    margin: 20px 0;
 }
 
 /* list component */
@@ -441,7 +444,6 @@ select:nth-of-type(2) {
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
-    color: #000;
 }
 
 .from_dict {
@@ -452,8 +454,11 @@ select:nth-of-type(2) {
 
 .meaning {
     font-size: 12px;
-    color: #000;
     margin: 5px auto 20px;
+}
+
+dt + div {
+    display: inline;
 }
 
 /* 실시간 검색어 */
@@ -555,6 +560,7 @@ select:nth-of-type(2) {
 #news_list li > a {
     float:left;
     margin: 0 10px 0 0;
+    overflow: hidden;
 }
 
 
@@ -594,7 +600,7 @@ select:nth-of-type(2) {
     margin-right: 1px;
 }
 
-#webtoon_list li a:hover {
+#webtoon_list li a:hover small {
     text-decoration: underline;
 }
 
@@ -603,7 +609,7 @@ select:nth-of-type(2) {
 }
 
 .webtoon_content {
-    display:inline;
+    display:inline-block;
 }
 
 .webtoon_content img {
@@ -625,7 +631,7 @@ select:nth-of-type(2) {
 .webtoon_content small {
     display: block;
     font-size:12px;
-    color: #000;
+    overflow: hidden;
 }
 
 .txt_smart_toon {

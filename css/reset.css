@@ -1,10 +1,12 @@
 @charset "utf-8";
 
+/* custom_reset */
+
 html, body, div, span, object,
 h1, h2, h3, h4, h5, h6, p, pre,
 a, address, del, em, img, q, s,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, u, i, center,l[9]
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -14,8 +16,6 @@ menu, nav, output, ruby, section, summary {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 
@@ -37,3 +37,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.blind {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+/* //custom_reset */
