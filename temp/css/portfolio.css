@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+<<<<<<< HEAD
+=======
+* {
+    color: #000;
+}
+
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 table {
     border-collapse: collapse;
 }
@@ -30,7 +37,7 @@ h3 {
     font-weight: bold;
 }
 
-h4 {
+form div label {
     font-size:14px;
     font-weight: bold;
 }
@@ -74,7 +81,10 @@ nav {
 
 #nav_ul li {
     display: table-cell;
+<<<<<<< HEAD
     border: 1px solid #d1d1d1;
+=======
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
     height: 33px;
     text-align: center;
     list-style-type: none;
@@ -94,13 +104,13 @@ nav {
 
 #nav_ul li a {
     text-decoration: none;
-    color: #000;
     font-size: 16px;
     line-height: 2.2;
     display:block;
+    border: 1px solid #d1d1d1;
 }
 
-#nav_ul li:hover {
+#nav_ul a:hover {
     border: 1px solid #454545;
     font-weight: bold;
 }
@@ -118,7 +128,10 @@ main {
 main h2 {
     font-size: 20px;
     font-weight: bold;
+<<<<<<< HEAD
     color: #000;
+=======
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
     border-bottom: 1px solid #454545;
     padding: 0 0 20px 0;
 }
@@ -179,8 +192,15 @@ footer strong {
 /* 아동 사이즈 */
 
 #baby_size {
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
     width: 100%;
+}
+
+#baby_size td {
+    text-align: center;
 }
 
 #baby_size tr {
@@ -220,16 +240,16 @@ footer strong {
 
 #ref_refundable {
     border-collapse: collapse;
-    text-align:center;
     width: 100%;
 }
 
-#ref_refundable th, ref_refundable td {
+#ref_refundable th, #ref_refundable td {
     padding: 10px 20px;
 }
 
 #ref_refundable thead td {
     width: 37%;
+    text-align: center;
 }
 
 #ref_refundable thead th, #ref_refundable tbody th {
@@ -252,6 +272,9 @@ footer strong {
     background-color: #fbfbfb;
     border-top: 1px solid #a5a5a5;
     border-bottom: 1px solid #e4e4e4;
+}
+
+#ref_refundable tfoot td {
     font-weight: bold;
 }
 
@@ -263,7 +286,10 @@ footer strong {
 
 #form_cover input {
     font-size: 12px;
+<<<<<<< HEAD
     color: #000;
+=======
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
     width: 896px;
     text-indent: 5px;
     height: 24px;
@@ -279,7 +305,11 @@ footer strong {
 }
 
 #form_cover label {
+<<<<<<< HEAD
     display: block;
+=======
+    display: inline-block;
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
     margin-bottom: 10px;
 }
 
@@ -292,7 +322,10 @@ footer strong {
 #form_cover select {
     margin-top: 10px;
     width: 290px;
+<<<<<<< HEAD
     color: #000;
+=======
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
     height: 30px;
     padding: 5px;
 }
@@ -416,6 +449,7 @@ select:nth-of-type(2) {
     height: 45px;
     width: 900px;
     padding: 0;
+    margin: 20px 0;
 }
 
 /* list component */
@@ -426,6 +460,17 @@ select:nth-of-type(2) {
     margin: 0 0 45px;
 }
 
+<<<<<<< HEAD
+/* list component */
+
+/* 사전 검색 결과 */
+#dict_result {
+    padding: 45px 20px;
+    margin: 0 0 45px;
+}
+
+=======
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 #dict_result dt:first-of-type {
     font-size: 32px;
     font-weight: bold;
@@ -437,7 +482,10 @@ select:nth-of-type(2) {
     display: inline-block;
     font-size: 14px;
     font-weight: bold;
+<<<<<<< HEAD
     color: #000;
+=======
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 }
 
 .from_dict {
@@ -448,10 +496,20 @@ select:nth-of-type(2) {
 
 .meaning {
     font-size: 12px;
+<<<<<<< HEAD
     color: #000;
     margin: 5px auto 20px;
 }
 
+=======
+    margin: 5px auto 20px;
+}
+
+dt + div {
+    display: inline;
+}
+
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 /* 실시간 검색어 */
 #realtime_search_word {
     width: 150px;
@@ -551,6 +609,10 @@ select:nth-of-type(2) {
 #news_list li > a {
     float:left;
     margin: 0 10px 0 0;
+<<<<<<< HEAD
+=======
+    overflow: hidden;
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 }
 
 
@@ -590,7 +652,11 @@ select:nth-of-type(2) {
     margin-right: 1px;
 }
 
+<<<<<<< HEAD
 #webtoon_list li a:hover {
+=======
+#webtoon_list li a:hover small {
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
     text-decoration: underline;
 }
 
@@ -599,7 +665,11 @@ select:nth-of-type(2) {
 }
 
 .webtoon_content {
+<<<<<<< HEAD
     display:inline;
+=======
+    display:inline-block;
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 }
 
 .webtoon_content img {
@@ -621,7 +691,11 @@ select:nth-of-type(2) {
 .webtoon_content small {
     display: block;
     font-size:12px;
+<<<<<<< HEAD
     color: #000;
+=======
+    overflow: hidden;
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 }
 
 .txt_smart_toon {

@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+<<<<<<< HEAD
+=======
+/* custom_reset */
+
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 html, body, div, span, object,
 h1, h2, h3, h4, h5, h6, p, pre,
 a, address, del, em, img, q, s,
@@ -14,8 +19,11 @@ menu, nav, output, ruby, section, summary {
 	margin: 0;
 	padding: 0;
 	border: 0;
+<<<<<<< HEAD
 	font-size: 100%;
 	font: inherit;
+=======
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
 	vertical-align: baseline;
 }
 
@@ -36,4 +44,19 @@ ol, ul {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+<<<<<<< HEAD
 }
+=======
+}
+
+.blind {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+/* //custom_reset */
+>>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
