@@ -1,0 +1,649 @@
+@charset "utf-8";
+
+* {
+    color: #000;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+body, header, nav, main, footer, ol, ul, li, div, h1, input, textarea, h4, a {
+    margin: 0;
+    padding: 0;
+}
+
+.check_size {
+    border:solid 3px red;
+}
+
+body {
+    height: 100%;
+}
+
+.font-12px {
+    font-size: 12px;
+}
+
+.border-normal {
+    border: 1px solid #e4e4e4;
+}
+
+h3 {
+    font-size:14px;
+    font-weight: bold;
+}
+
+form div label {
+    font-size:14px;
+    font-weight: bold;
+}
+
+header {
+    background-color: #000;
+    height:120px;
+    position: relative;
+    width: 100%;
+    top: 0;
+}
+
+#header_div {
+    margin: auto;
+    padding: 40px 0 0;
+    width: 1080px;
+}
+
+#header_div h1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left:40px;
+}
+
+nav {
+    display: block;
+    height: 73px;
+    width: 100%;
+    margin: 40px auto 0;
+}
+
+#nav_ul {
+    padding: 0 26px;
+    display: table;
+    table-layout: fixed;
+    margin: 0 auto;
+    width:1022px;
+    border-spacing: 14px 0;
+}
+
+#nav_ul li {
+    display: table-cell;
+    height: 33px;
+    text-align: center;
+    list-style-type: none;
+}
+
+#nav_ul li:first-of-type {
+    margin-left: 40px;
+}
+
+#nav_ul li:last-of-type {
+    margin-right:40px;
+}
+
+#nav_ul li:nth-of-type(2) {
+    margin: 0 14px;
+}
+
+#nav_ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 2.2;
+    display:block;
+    border: 1px solid #d1d1d1;
+}
+
+#nav_ul a:hover {
+    border: 1px solid #454545;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+#h2_cover {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+main h2 {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #454545;
+    padding: 0 0 20px 0;
+}
+
+#dl_cover {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#frame {
+    margin: 30px auto 40px;
+}
+
+#frame > dt {
+    border: 1px solid #d1d1d1;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-indent: 15px;
+    height: 46px;
+    line-height: 3;
+}
+
+#frame > dd {
+    border: 1px solid #d1d1d1;
+    border-top: 0;
+    padding: 30px;
+    margin:0 0 30px 0;
+}
+
+main dd:last-of-type {
+    margin-bottom: 0;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 0 0;
+}
+
+footer address {
+    color: #999;
+    font-style: normal;
+}
+
+footer strong {
+    line-height: 2;
+}
+
+/* table components */
+
+#table_component {
+    font-size: 12px;
+    color: #555;
+}
+
+/* 아동 사이즈 */
+
+#baby_size {
+    width: 100%;
+}
+
+#baby_size td {
+    text-align: center;
+}
+
+#baby_size tr {
+    border: 1px solid #e4e4e4;
+}
+
+#baby_size thead tr:first-child {
+    font-weight: bold;
+}
+
+#baby_size thead td {
+    width: 32%;
+}
+
+#baby_size thead th {
+    width: 17%
+}
+
+#baby_size thead th:last-child {
+    width: 17%;
+}
+
+#baby_size thead {
+    background-color: #fbfbfb;
+}
+
+#baby_size th, #baby_size td {
+    border: 1px solid #e4e4e4;
+    padding: 10px 15px;
+}
+
+/* 환불 가능 금액 조회 */
+
+#table_component h3:last-of-type {
+    margin-top: 40px;
+}
+
+#ref_refundable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#ref_refundable th, #ref_refundable td {
+    padding: 10px 20px;
+}
+
+#ref_refundable thead td {
+    width: 37%;
+    text-align: center;
+}
+
+#ref_refundable thead th, #ref_refundable tbody th {
+    font-weight: 400;
+    width: 21%;
+}
+
+#ref_refundable thead {
+    background-color: #fbfbfb;
+    border-top: 2px solid #a5a5a5;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#ref_refundable tbody td, #ref_refundable tfoot td {
+    text-align: right;
+    padding-right: 8%;
+}
+
+#ref_refundable tfoot {
+    background-color: #fbfbfb;
+    border-top: 1px solid #a5a5a5;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#ref_refundable tfoot td {
+    font-weight: bold;
+}
+
+/* form_component */
+#form_cover {
+    width: 100%;
+    background-color: #fbfbfb;
+}
+
+#form_cover input {
+    font-size: 12px;
+    width: 896px;
+    text-indent: 5px;
+    height: 24px;
+}
+
+#form_cover form {
+    margin: 20px;
+}
+
+#form_cover form > div {
+    margin-top: 20px;
+    width: 900px;
+}
+
+#form_cover label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/*생년월일*/
+
+#select_cover {
+    width: 900px;
+}
+
+#form_cover select {
+    margin-top: 10px;
+    width: 290px;
+    height: 30px;
+    padding: 5px;
+}
+
+select:nth-of-type(2) {
+    position: relative;
+    top: 0; bottom:0;
+    left: 15px; right: 0;
+}
+
+#select_cover select:first-of-type {
+    float: left;
+}
+
+#select_cover select:last-of-type {
+    float: right;
+}
+
+/* 성별 */
+
+#radio_cover label {
+    display: inline;
+    margin-right: 90px;
+}
+
+#radio_cover input {
+    width: 14px;
+    padding: 0;
+    transform: translateY(5px);
+    margin-right: 10px;
+}
+
+/* 이메일 */
+
+#email_cover input {
+    height: 26px;
+    padding: 0;
+    width: 896px;
+}
+
+/* 휴대전화 */
+
+#phone_cover {
+    padding: 0;
+    margin-bottom: 10px;
+    width: 896px;
+}
+
+#phone_cover > input {
+    width: 720px;
+    height: 26px;
+}
+
+#phone_cover a {
+    float:right;
+    border: 1px solid #08a600;
+    background-color: #08a600;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    width: 160px;
+    height: 18px;
+    padding:5px 0;
+    line-height: 1.5;
+    transform: translateX(3px);
+}
+
+#phone_cover + #certificate {
+    width: 896px;
+    height:26px;
+}
+
+/* 취미 */
+
+.checkbox_cover {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    width: 50px;
+    margin: 0 auto;
+}
+
+#checkbox_list {
+    margin-top: 5px;
+    width: 900px;
+}
+
+#checkbox_list .checkbox_cover {
+    display: inline-block;
+    width: 60px;
+    margin-right: 45px;
+}
+
+#checkbox_list .checkbox_cover input {
+    width: 12px;
+    height: 12px;
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+
+#checkbox_list .checkbox_cover label {
+    display: inline;
+}
+
+/* 가입인사 */
+
+#first_greeting {
+    resize: none;
+    width: 898px;
+    height: 150px;
+    font-size: 12px;
+}
+
+/* 제출하기 */
+
+#submit {
+    border: 1px solid #08a600;
+    background-color: #4ec53d;
+    font-size: 16px;
+    color: #fff;
+    height: 45px;
+    width: 900px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+/* list component */
+
+/* 사전 검색 결과 */
+#dict_result {
+    padding: 45px 20px;
+    margin: 0 0 45px;
+}
+
+#dict_result dt:first-of-type {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.dict_word {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.from_dict {
+    font-size: 12px;
+    color: #559bfa;
+    margin-left: 5px;
+}
+
+.meaning {
+    font-size: 12px;
+    margin: 5px auto 20px;
+}
+
+dt + div {
+    display: inline;
+}
+
+/* 실시간 검색어 */
+#realtime_search_word {
+    width: 150px;
+    padding: 20px 40px 20px 20px;
+    font-size:12px;
+    margin: 0 0 45px 0;
+}
+
+#realtime_search_word ol {
+    counter-reset: item;
+    list-style-type: none;
+}
+
+#realtime_search_word li {
+    display:block;
+    margin-bottom: 10px;
+    counter-increment: item;
+}
+
+#realtime_search_word li:last-of-type {
+    margin: 0;
+}
+
+#realtime_search_word a {
+    text-decoration: none;
+    color: #000;
+}
+
+#realtime_search_word li:before {
+    display:inline-block;
+    content: counter(item);
+    border: 1px solid #e4e4e4;
+    width: 15px;
+    height: 15px;
+    text-align:center;
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#realtime_search_word a:hover {
+    text-decoration: underline;
+}
+
+/* 쿠키 이용안내 */
+
+#cookie_guide {
+    padding: 20px 40px;
+    font-size: 12px;
+    margin-bottom: 45px;
+}
+
+#cookie_guide em {
+    font-style: normal;
+    color: #559bfa;
+}
+
+#cookie_guide a {
+    text-decoration: underline;
+    color: #559bfa;
+}
+
+#cookie_guide strong {
+    color: #ec5356;
+}
+
+#cookie_guide li {
+    padding-bottom: 10px;
+}
+
+#cookie_guide li:first-of-type {
+    font-weight: bold;
+}
+
+#cookie_guide li:last-of-type {
+    padding-bottom: 0;
+}
+
+/* 뉴스 */
+#news_list {
+    padding: 0 20px;
+    margin-bottom: 45px;
+}
+
+#news_list li {
+    list-style-type: none;
+    margin: 20px 0 0 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#news_list li:last-of-type {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+#news_list li > a {
+    float:left;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+}
+
+
+.news_content a {
+    display: inline;
+    font-size: 14px;
+    font-weight: bold;
+    color: #00c;
+    text-decoration: underline;
+}
+
+.news_content p {
+    display: block;
+    font-size: 12px;
+}
+
+/* 웹툰 */
+#webtoon_list {
+    padding: 20px;
+    display: inline-block;
+    /* width: 896px; */
+}
+
+#webtoon_list li {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+}
+
+#webtoon_list li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+}
+
+#webtoon_list li a:last-of-type {
+    margin-right: 1px;
+}
+
+#webtoon_list li a:hover small {
+    text-decoration: underline;
+}
+
+#webtoon_list li a:hover h4 {
+    text-decoration: underline;
+}
+
+.webtoon_content {
+    display:inline-block;
+}
+
+.webtoon_content img {
+    display:block;
+}
+
+.webtoon_content h4 {
+    display: inline-block;
+    margin: 10px 0 0 0;
+}
+
+.webtoon_content span {
+    display: inline-block;
+    padding: 1px 3px;
+    vertical-align: 2px;
+    margin-right: 4px;
+}
+
+.webtoon_content small {
+    display: block;
+    font-size:12px;
+    overflow: hidden;
+}
+
+.txt_smart_toon {
+    border: 1px solid #df4e28;
+    background-color: #ec5336;
+    font-size: 10px;
+    color: #fff;
+}
+
+.txt_cut_toon {
+    border: 1px solid #71b036;
+    background-color: #80c83d;
+    font-size: 10px;
+    color: #fff;
+}
