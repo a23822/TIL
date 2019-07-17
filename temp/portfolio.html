@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/portfolio.css"/>
 </head>
 <body>
-    <header>
+    <header class="header_wrap">
         <h1 class="header_title">포트폴리오</h1>
     </header>
 
@@ -34,10 +34,8 @@
                         <caption><h4>아동 사이즈</h4></caption>
                         <colgroup>
                             <col span="2" class="baby_col_1">
-                            <col span="2" class="baby_col_2">
-                            <col span="2" class="baby_col_3">
-                            <col span="2" class="baby_col_4">
-                            <col class="baby_col_5">
+                            <col span="6" class="baby_col_2">
+                            <col class="baby_col_3">
                         </colgroup>
                         <thead>
                             <tr>
@@ -118,18 +116,14 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                <div class="content">
+
                     <table class="ref_refundable">
                         <caption>
                             <h4>환불 가능 금액 조회</h4>
                         </caption>
                         <colgroup>
                             <col class="ref_col_1"/>
-                            <col class="ref_col_2"/>
-                            <col class="ref_col_3"/>
-                            <col class="ref_col_4"/>
-                            <col class="ref_col_5"/>
+                            <col span="3" class="ref_col_2"/>
                         </colgroup>
                         <thead>
                             <tr>
@@ -187,7 +181,7 @@
 
                             <div class="input_wrap">
                                 <label class="label_text" for="password">비밀번호</label>
-                                <input type="text" id="password" class="input_common_box"/>
+                                <input type="password" id="password" class="input_common_box"/>
                             </div>
 
                             <div class="input_wrap">
@@ -203,11 +197,13 @@
                                         <option>1</option>
                                         <option>2</option>
                                     </select>
+                                    <label for="birth_month" class="blind">생년월일 월</label>
                                     <select id="birth_month" class="input_common_box birth_box" title="birth_month">
                                         <option>월</option>
                                         <option>1d</option>
                                         <option>1qwe</option>
                                     </select>
+                                    <label for="birth_day" class="blind">생년월일 일</label>
                                     <select id="birth_day" class="input_common_box birth_box" title="birth_day">
                                         <option>일</option>
                                         <option>1</option>
@@ -217,15 +213,15 @@
                             </div>
 
                             <div class="input_wrap">
-                                <label class="label_text" for="male">성별</label>
+                                <strong class="label_text">성별</strong>
                                 <div class="radio_wrap">
                                     <div class="radio_cell">
                                         <input type="radio" id="male" class="radio_input" name="gender" title="남자"/>
-                                        <span class="radio_text">남자</span>
+                                        <label for="male" class="radio_text">남자</label>
                                     </div>
                                     <div class="radio_cell">
                                         <input type="radio" id="female" class="radio_input" name="gender" title="여자"/>
-                                        <span class="radio_text">여자</span>
+                                        <label for="female" class="radio_text">여자</label>
                                     </div>
                                 </div> 
                             </div>
@@ -300,13 +296,13 @@
                             </div>
                             <dl>
                                 <dt>
-                                    <em class="search_word">프로젝트</em><span class="from_dict">영양학사전</span>
+                                    <strong class="search_word">프로젝트</strong><em class="from_dict">영양학사전</em>
                                 </dt>
                                 <dd class="meaning">
                                     연구나 새로운 사업의 개발을 위한 유기적이고 조직적인 계획. 원자력 개발이나 우주개발 등은 대형 프로젝트를 조직하여 이루어진다. 일반적으로는 특정한 목표, 계획을 위한 학습 활동, 실행계획 등을 가리킨다.
                                 </dd>
                                 <dt>
-                                    <em class="search_word">프로젝트</em><span class="from_dict">Basic 중학생을 위한 기술, 가정 용어사전</span>
+                                    <strong class="search_word">프로젝트</strong><em class="from_dict">Basic 중학생을 위한 기술, 가정 용어사전</em>
                                 </dt>
                                 <dd class="meaning">
                                     어떤 특정한 목적 달성을 위하여 실시되는 시스템 개발, 프로그램 설계, 연구 개발 계획 혹은 건설 공사 등과 같이 한 번에 그치는 성격을 갖는 단위 작업이나 사업.
