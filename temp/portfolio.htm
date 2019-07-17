@@ -5,51 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>포트폴리오</title>
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="css/portfolio.css"/>
+    <link rel="stylesheet" href="css/portfolio.css"/>
 </head>
 <body>
-    <header>
-        <div id="header_div">
-            <h1>포트폴리오</h1>
-        </div>
+    <header class="header_wrap">
+        <h1 class="header_title">포트폴리오</h1>
     </header>
 
-    <nav>
-        <ul id="nav_ul">
-            <li><a href="#table_component">테이블 요소</a></li>
-            <li><a href="#form_component">폼 요소</a></li>
-            <li><a href="#list_component">리스트 요소</a></li>
-        </ul>
-    </nav>
+    <div class="nav_wrap">
+        <nav>
+            <ul class="tap_menu">
+                <li class="tap_item"><a class="tap_text" href="#table_component">테이블 요소</a></li>
+                <li class="tap_item"><a class="tap_text" href="#form_component">폼 요소</a></li>
+                <li class="tap_item"><a class="tap_text" href="#list_component">리스트 요소</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <main>
-        <div id="h2_cover">
-            <h2>구성 요소</h2>
-        </div>
+    <div class="main_wrap">
+        <main>
+            <h2 class="main_title">구성 요소</h2>
 
-        <div id="dl_cover">
-<<<<<<< HEAD:temp/portfolio.htm
-            <dl id="frame">
-=======
-            <dl id="frame" role="presentation">
->>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d:temp/portfolio.html
-                <dt>테이블 요소</dt>
-                <dd id="table_component">
-                    <!--TODO 캡션 처리 colgroup 사용-->
-                    <h3>아동 사이즈</h3>
-
-                    <table id="baby_size" class="border-normal">
+            <section id="table_component" class="component_wrap">
+                <h3 class="content_title">테이블 요소</h3>
+                
+                <div class="content">
+                    <table class="baby_size">
+                        <caption><h4>아동 사이즈</h4></caption>
+                        <colgroup>
+                            <col span="2" class="baby_col_1">
+                            <col span="6" class="baby_col_2">
+                            <col class="baby_col_3">
+                        </colgroup>
                         <thead>
                             <tr>
-                                <td colspan='2' scope="colgroup">구분</td>
+                                <th colspan='2' scope="colgroup">구분</th>
                                 <th colspan='2' scope="col">Small</th>
                                 <th colspan='2' scope="col">Medium</th>
                                 <th colspan='2' scope="col">Large</th>
                                 <th scope="col">X-Large</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             <tr>
                                 <th rowspan='3' scope="rowgroup">미국 남아<br/>[Boys 2-7]</th>
@@ -119,15 +115,19 @@
                                 <td>23-25</td>
                             </tr>
                         </tbody>
-                        
                     </table>
 
-                    <h3>환불 가능 금액 조회</h3>
-
-                    <table id="ref_refundable">
+                    <table class="ref_refundable">
+                        <caption>
+                            <h4>환불 가능 금액 조회</h4>
+                        </caption>
+                        <colgroup>
+                            <col class="ref_col_1"/>
+                            <col span="3" class="ref_col_2"/>
+                        </colgroup>
                         <thead>
                             <tr>
-                                <td>구분</td>
+                                <th>구분</th>
                                 <th scope="col">환불가능액</th>
                                 <th scope="col">수수료</th>
                                 <th scope="col">총 환불금액</th>
@@ -140,14 +140,14 @@
                                 <td>1,000원</td>
                                 <td>99,000원</td>
                             </tr>
-
+                    
                             <tr>
                                 <th scope="row">월정액제 보상금액</th>
                                 <td>10,000원</td>
                                 <td>5,000원</td>
                                 <td>5,000원</td>
                             </tr>
-
+                    
                             <tr>
                                 <th scope="row">코인</th>
                                 <td>9,000원</td>
@@ -164,406 +164,301 @@
                             </tr>
                         </tfoot>
                     </table>
-                </dd>
-    
-                <dt>폼 요소</dt>
-                <dd id="form_component">
-                    <div>
-                        <h3>회원가입</h3>
-                    </div>
-                    
-                    <div id="form_cover" class="border-normal">
+                </div>
+            </section>
+
+            <section id="form_component" class="component_wrap">
+                <h3 class="content_title">폼 요소</h3>
+                <div class="content">
+                    <h4 class="form_title">회원가입</h4>
+
+                    <div class="form_wrap">
                         <form>
-                            <div>
-                                <label for="user_id">아이디</label>
-                                <input type="text" id="user_id" name="user_id"/>
+                            <div class="input_wrap">
+                                <label class="label_text" for="user_id">아이디</label>
+                                <input type="text" id="user_id" class="input_common_box"/>
                             </div>
 
-                            <div>
-                                <label for="password">비밀번호</label>
-                                <input type="password" id="password" name="password"/>
+                            <div class="input_wrap">
+                                <label class="label_text" for="password">비밀번호</label>
+                                <input type="password" id="password" class="input_common_box"/>
                             </div>
-                            <div>
-                                <label for="name">이름</label>
-                                <input type="text" id="name" name="username"/>
+
+                            <div class="input_wrap">
+                                <label class="label_text" for="username">이름</label>
+                                <input type="text" id="username" class="input_common_box"/>
                             </div>
-                            
-                            <!--fieldset, legend 사용-->
-                            <div>
-                                <label for="select_cover">생년월일</lable>
-                                <div id="select_cover">
-                                    <select id="year" name="year" class="font-12px">
-                                        <option selected>년도</option>
+
+                            <div class="input_wrap">
+                                <label class="label_text" for="birth_year">생년월일</label>
+                                <div class="select_wrap">
+                                    <select id="birth_year" class="input_common_box birth_box">
+                                        <option>년도</option>
+                                        <option>1</option>
+                                        <option>2</option>
                                     </select>
-                                    <select id="month" name="month" class="font-12px">
-                                        <option selected>월</option>
+                                    <label for="birth_month" class="blind">생년월일 월</label>
+                                    <select id="birth_month" class="input_common_box birth_box" title="birth_month">
+                                        <option>월</option>
+                                        <option>1d</option>
+                                        <option>1qwe</option>
                                     </select>
-                                    <select id="day" name="day" class="font-12px">
-                                        <option selected>일</option>
+                                    <label for="birth_day" class="blind">생년월일 일</label>
+                                    <select id="birth_day" class="input_common_box birth_box" title="birth_day">
+                                        <option>일</option>
+                                        <option>1</option>
+                                        <option>1</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <!-- fieldset legend 사용-->
-                            <div>
-                                <label for="radio_cover">성별</label>
-                                <div id="radio_cover">
-                                    <input id="male" name="gender" type="radio" value="남자"/>
-                                    <label for="male" class="font-12px">남자</label>
+                            <div class="input_wrap">
+                                <strong class="label_text">성별</strong>
+                                <div class="radio_wrap">
+                                    <div class="radio_cell">
+                                        <input type="radio" id="male" class="radio_input" name="gender"/>
+                                        <label for="male" class="radio_text">남자</label>
+                                    </div>
+                                    <div class="radio_cell">
+                                        <input type="radio" id="female" class="radio_input" name="gender"/>
+                                        <label for="female" class="radio_text">여자</label>
+                                    </div>
+                                </div> 
+                            </div>
 
-                                    <input id="female" name="gender" type="radio" value="여자"/>
-                                    <label for="female" class="font-12px">여자</label>
+                            <div class="input_wrap">
+                                <label class="label_text" for="email">이메일</label>
+                                <input type="email" id="email" class="input_common_box" placeholder="이메일 주소에 &#39;@&#39;를 포함해주세요.">
+                            </div>
+
+                            <div class="input_wrap">
+                                <label class="label_text" for="tel">휴대전화</label>
+                                <div class="tel_wrap">
+                                    <input type="tel" id="tel" class="input_common_box tel_box" placeholder="숫자만 입력해주세요."/>
+                                    <button type="button" class="certificate_btn">인증번호 받기</button>
+                                </div>
+                                <label class="blind" for="certificate">인증번호 입력</label>
+                                <input type="number" id="certificate" class="input_common_box" placeholder="인증번호를 입력해주세요."/>
+                            </div>
+
+                            <div class="input_wrap">
+                                <strong class="label_text">취미</strong>
+                                <div class="checkbox_wrap">
+                                    <div class="checkbox_cell">
+                                        <input type="checkbox" name="hobby" id="work_out"/>
+                                        <label class="checkbox_text" for="work_out">운동</label>
+                                    </div>
+                                    <div class="checkbox_cell">
+                                        <input type="checkbox" name="hobby" id="cook"/>
+                                        <label class="checkbox_text" for="cook">요리</label>
+                                    </div>
+                                    <div class="checkbox_cell">
+                                        <input type="checkbox" name="hobby" id="trip"/>
+                                        <label class="checkbox_text" for="trip">여행</label>
+                                    </div>
+                                    <div class="checkbox_cell">
+                                        <input type="checkbox" name="hobby" id="game"/>
+                                        <label class="checkbox_text" for="game">게임</label>
+                                    </div>
+                                    <div class="checkbox_cell">
+                                        <input type="checkbox" name="hobby" id="computer"/>
+                                        <label class="checkbox_text" for="computer">컴퓨터</label>
+                                    </div>
+                                    <div class="checkbox_cell">
+                                        <input type="checkbox" name="hobby" id="music"/>
+                                        <label class="checkbox_text" for="music">음악</label>
+                                    </div>
+                                    <div class="checkbox_cell">
+                                        <input type="checkbox" name="hobby" id="reading"/>
+                                        <label class="checkbox_text" for="reading">독서</label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div id="email_cover">
-                                <label for="email">이메일</label>
-                                <input type="email" id="email" name="email" placeholder="이메일 주소에 &#39;@&#39;를 포함해주세요."/>
+                            <div class="input_wrap">
+                                <label for="first_greeting" class="label_text">가입인사</label>
+                                <textarea id="first_greeting" class="textarea_box"></textarea>
                             </div>
 
-                            <!-- fieldset legend 사용-->
-                            <div>
-                                <label for="phone">휴대전화</label>
-                                <div id="phone_cover">
-                                    <input type="tel" id="phone" name="phone" placeholder="숫자만 입력해주세요."/>
-                                    <a href="#" class="font-12px">인증번호 받기</a>
-                                </div>
-                                <input type="number" title="인증번호" title="인증번호" id="certificate" name="certificate" placeholder="인증번호를 입력해주세요."/>
-                            </div>
-
-                            <!-- todo 네글자이상일때도 고칠것-->
-                            <div>
-                                <label for="checkbox_list">취미</label>
-                                <div id="checkbox_list">
-                                    <div class="checkbox_cover">    
-                                        <input type="checkbox" id="work_out" name="운동"/>
-                                        <label for="work_out">운동</label>
-                                    </div>
-
-                                    <div class="checkbox_cover">
-                                        <input type="checkbox" id="cook" name="요리"/>
-                                        <label for="cook">요리</label>
-                                    </div>
-
-                                    <div class="checkbox_cover">
-                                        <input type="checkbox" id="trip" name="여행"/>
-                                        <label for="trip">여행</label>
-                                    </div>
-
-                                    <div class="checkbox_cover">
-                                        <input type="checkbox" id="game" name="게임"/>
-                                        <label for="game">게임</label>
-                                    </div>
-
-                                    <div class="checkbox_cover">
-                                        <input type="checkbox" id="computer" name="컴퓨터"/>
-                                        <label for="computer">컴퓨터</label>
-                                    </div>
-
-                                    <div class="checkbox_cover">
-                                        <input type="checkbox" id="music" name="음악"/>
-                                        <label for="music">음악</label>
-                                    </div>
-
-                                    <div class="checkbox_cover">
-                                        <input type="checkbox" id="movie" name="영화"/>
-                                        <label for="movie">영화</label>
-                                    </div>
-
-                                    <div class="checkbox_cover">
-                                        <input type="checkbox" id="read" name="독서"/>
-                                        <label for="read">독서</label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div id="#greeting_cover">
-                                <label for="first_greeting">가입인사</label>
-                                <textarea id="first_greeting" name="first_greeting" class="border-normal"></textarea>
-                            </div>
-
-                            <button type="submit" id="submit">가입하기</button>
-    
+                            <button type="submit" class="submit_btn">가입하기</button>
                         </form>
                     </div>
-                </dd>
-    
-                <dt>리스트 요소</dt>
-                <dd id="list_component">
-                    <h3>&#39;프로젝트&#39; 사전 검색 결과</h3>
-                    <dl id="dict_result" class='border-normal'>
-                        <dt>프로젝트</dt>
-<<<<<<< HEAD:temp/portfolio.htm
-                        <dt class="dict_word">프로젝트</dt><span class="from_dict">영양학사전</span>
-                        <dd class="meaning">연구나 새로운 사업의 개발을 위한 유기적이고 조직적인 계획. 원자력 개발이나 우주개발 등은 대형 프로젝트를 조직하여 이루어진다. 일반적으로는 특정한 목표, 계획을 위한 학습 활동, 실행계획 등을 가리킨다.</dd>
+                </div>
+            </section>
 
-                        <dt class="dict_word">프로젝트</dt><span class="from_dict">Basic 중학생을 위한 기술, 가정 용어사전</span>
-                        <dd class="meaning">어떤 특정한 목적 달성을 위하여 실시되는 시스템 개발, 프로그램 설계, 연구 개발 계획 혹은 건설 공사 등과 같이 한 번에 그치는 성격을 갖는 단위 작업이나 사업.</dd>
-                    </dl>
+            <section id="list_component" class="component_wrap">
+                <h3 class="content_title">리스트 요소</h3>
+                <div class="content">
+                    <article class="article_wrap">
+                        <h4 class="article_title">&#39;프로젝트&#39; 사전 검색 결과</h4>
+                        <div class="article_content dic_content">
+                            <strong class="dict_word">프로젝트</strong>
+                            <dl>
+                                <dt>
+                                    <strong class="search_word">프로젝트</strong><em class="from_dict">영양학사전</em>
+                                </dt>
+                                <dd class="meaning">
+                                    연구나 새로운 사업의 개발을 위한 유기적이고 조직적인 계획. 원자력 개발이나 우주개발 등은 대형 프로젝트를 조직하여 이루어진다. 일반적으로는 특정한 목표, 계획을 위한 학습 활동, 실행계획 등을 가리킨다.
+                                </dd>
+                                <dt>
+                                    <strong class="search_word">프로젝트</strong><em class="from_dict">Basic 중학생을 위한 기술, 가정 용어사전</em>
+                                </dt>
+                                <dd class="meaning">
+                                    어떤 특정한 목적 달성을 위하여 실시되는 시스템 개발, 프로그램 설계, 연구 개발 계획 혹은 건설 공사 등과 같이 한 번에 그치는 성격을 갖는 단위 작업이나 사업.
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
 
-                    <h3>실시간 검색어</h3>
-                    <ol id="realtime_search_word" class="border-normal">
-                        <li><a href="https://search.naver.com/search.naver?query=입추">입추</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=런닝맨 유재석">런닝맨 유재석</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=런닝맨">런닝맨</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=소나기">소나기</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=주간 날씨">주간 날씨</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=깔라만시">깔라만시</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=내 아이디는 강남미인">내 아이디는 강남미인</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=차은우">차은우</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=한국사능력검정시험">한국사능력검정시험</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=맛있는 녀석들">맛있는 녀석들</a></li>
-                    </ol>
+                    <article class="article_wrap">
+                        <h4 class="article_title">실시간 검색어</h4>
+                        <div class="article_content realtime_content">
+                            <ol class="realtime_wrap">
+                                <li>
+                                    <span class="order_wrap">1</span><a href="#" class="realtime_word">입추</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">2</span><a href="#" class="realtime_word">런닝맨 유재석</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">3</span><a href="#" class="realtime_word">런닝맨</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">4</span><a href="#" class="realtime_word">소나기</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">5</span><a href="#" class="realtime_word">주간 날씨</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">6</span><a href="#" class="realtime_word">깔라만시</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">7</span><a href="#" class="realtime_word">내 아이디는 강남미인</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">8</span><a href="#" class="realtime_word">차은우</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">9</span><a href="#" class="realtime_word">한국사능력검정시험</a>
+                                </li>
+                                <li>
+                                    <span class="order_wrap">10</span><a href="#" class="realtime_word">맛있는 녀석들</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </article>
 
-                    <h3>쿠키 이용안내</h3>
-                    <ul id="cookie_guide" class="border-normal">
-                        <li><em>웹툰 작품</em>은 쿠키를 사용하여 대여/구매 하실 수 있습니다.</li>
-                        <li>쿠키 구매 시 지급되는 보너스 쿠키의 수량은 변경될 수 있으며, <strong>유효기간은 지급 후 90일</strong>입니다.</li>
-                        <li>구매 후 7일 이내, 사용하지 않은 쿠키 패키지는 <a href="">구매내역</a>에서 직접 구매 취소할 수 있습니다.</li>
-                        <li>일부 사용 후 잔여 쿠키에 대한 구매 취소는 고객센터를 통해 가능하며, 쿠키 구매 시 지급된 보너스 쿠키를 사용한 경우에는 해당 분량을 제외하고 환불됩니다.</li>
-                        <li>쿠키 구매 또는 사용 전 이용약관 동의가 필요합니다.<br/><a href="">쿠키 이용약관</a></li>
-                    </ul>
+                    <article class="article_wrap">
+                        <h4 class="article_title">쿠키 이용안내</h4>
+                        <div class="article_content">
+                            <ul class="cookie_guide">
+                                <li>
+                                    <strong><span class="webtoon_font">웹툰 작품</span>은 쿠키를 사용하여 대여/구매 하실 수 있습니다.</strong>
+                                </li>
+                                <li>
+                                    쿠키 구매 시 지급되는 보너스 쿠키의 수량은 변경될 수 있으며, <strong class="webtoon_term">유효기간은 지급 후 90일</strong>입니다.
+                                </li>
+                                <li>
+                                    구매 후 7일 이내, 사용하지 않은 쿠키 패키지는 <a href="#" class="webtoon_link">구매내역</a>에서 직접 구매 취소할 수 있습니다.
+                                </li>
+                                <li>
+                                    일부 사용 후 잔여 쿠키에 대한 구매 취소는 고객센터를 통해 가능하며, 쿠키 구매 시 지급된 보너스 쿠키를 사용한 경우에는 해당 분량을 제외하고 환불됩니다.
+                                </li>
+                                <li>
+                                    쿠키 구매 또는 사용 전 이용약관 동의가 필요합니다.<br/><a href="#" class="webtoon_link">쿠키 이용약관</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
 
-                    <h3>뉴스</h3>
+                    <article class="article_wrap">
+                        <h4 class="article_title">뉴스</h4>
+                        <div class="article_content">
+                            <ul class="news_wrap">
+                                <li>
+                                    <a href="#" class="img_wrap"><img src="image/thumbnail1.jpg" class="news_img" alt="내일도 35도 안팎 폭염, 내륙 소나기... 습도 높아 후텁지근"></a>
+                                    <div class="news_content">
+                                        <a href="#" class="news_title">[날씨] 내일도 35도 안팎 폭염・내륙 소나기&hellip;습도 높아 후텁지근</a>
+                                        <p class="news_summary">오늘은 입추 절기지만 가을은 아직 멀리있는 것 같습니다. 일부 내륙에는 소나기가 지났지만 소나기도 더위의 기세를 누그러뜨리진 못했는데요. 동해안을 제외한 전국 대부분 지방에 폭염 특보가 이어지는 가운데 내일도 한낮에 서울과 대전 35도, 광주와 대구가 36도까지 오를 것으로 예상됩니다. 내일도 대기가 불안정해지 면서 오후에 내륙에는 소나기가 지나는 곳이 있겠습니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="news_content">
+                                        <a href="#" class="news_title">[펫카드] 강아지 중성화가 필요한 이유</a>
+                                        <p class="news_summary">(서울&equals;뉴스1); 최서윤 기자,방은영 디자이너 &equals; 강아지 중성화 수술을 놓고 찬반이 팽팽하게 엇갈린다. 많은 사람들은 사람들과 공존하려면 개체수 조절을 위해 필요하다고 주장한 다. 그러나 어떤 사람들은 인위적인 수술은 안된다며 반대한다.</p>
+                                    </div>             
+                                </li>
+                                <li>
+                                    <a href="#" class="img_wrap"><img src="image/thumbnail1.jpg" class="news_img" alt="다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어"></a>
+                                    <div class="news_content">
+                                        <a href="#" class="news_title">다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어</a>
+                                        <p class="news_summary">복숭아가 제철이다. 여름 복숭아는 다양한 건강 효과를 낸다. 복숭아에는 포도당, 과당, 수분이 풍부하고 유기산&lpar;산성을 띠는 물질로 식품에서 신맛을 냄&rpar;이 0. 5&percnt; 정도로 적게 들어 단맛이 강하다. 복숭아의 열량은 100g당 36kcal다. 복숭아 한 개에 약 100kcal 정도다. 포만감에 비해 열량이 적은 편이어서 다이어트를 하는 사람에게도 좋다. 비타민이 많아서 피로 해소에 도움이 된다.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
 
-                    <ul id="news_list" class="border-normal">
-                        <li>
-                            <a href=""><img src="image/thumbnail1.jpg" alt="내일도 35도 안팎 폭염, 내륙 소나기"/></a>
-                            <div class="news_content">
-                                <a href="">&lbrack;날씨&rbrack; 내일도 35도 안팎 폭염・내륙 소나기&hellip;습도 높아 후텁지근</a>
-                                <p>오늘은 입추 절기지만 가을은 아직 멀리있는 것 같습니다. 일부 내륙에는 소나기가 지났지만 소나기도 더위의 기세를 누그러뜨리진 못했는데요. 동해안을 제외한 전국 대부분 지방에 폭염 특보가 이어지는 가운데 내일도 한낮에 서울과 대전 35도, 광주와 대구가 36도까지 오를 것으로 예상됩니다. 내일도 대기가 불안정해지 면서 오후에 내륙에는 소나기가 지나는 곳이 있겠습니다.</p>
-                            </div>
-                        </li>
+                    <article class="article_wrap">
+                        <h4 class="article_title">웹툰</h4>
+                        <div class="article_content webtoon_list">
+                            <ul class="webtoon_wrap">
+                                <li class="webtoon_content">
+                                    <a href="#">
+                                        <img src="image/thumbnail2.jpg" class="webtoon_img" alt=""/>
+                                        <strong class="webtoon_title">하루 3컷</strong>
+                                        <span class="webtoon_subtitle">17화 편리하게 피곤하게</span>
+                                    </a>
+                                </li>
+                                <li class="webtoon_content">
+                                    <a href="#">
+                                        <img src="image/thumbnail2.jpg" class="webtoon_img" alt=""/>
+                                        <span class="special_toon cut_toon">컷툰</span><strong class="webtoon_title">유미의 세포들</strong>
+                                        <span class="webtoon_subtitle">326화 미래에서 온 텔레파시</span>
+                                    </a>
+                                </li>
+                                <li class="webtoon_content">
+                                    <a href="#">
+                                        <img src="image/thumbnail2.jpg" class="webtoon_img" alt=""/>
+                                        <strong class="webtoon_title">이말년씨리즈 2018</strong>
+                                        <span class="webtoon_subtitle">58화 공포의 떡볶이</span>
+                                    </a>
+                                </li>
+                                <li class="webtoon_content">
+                                    <a href="#">
+                                        <img src="image/thumbnail2.jpg" class="webtoon_img" alt=""/>
+                                        <span class="special_toon smart_toon">스마트툰</span><strong class="webtoon_title">덴마</strong>
+                                        <span class="webtoon_subtitle">195화 1.다이크(195)</span>
+                                    </a>
+                                </li>
+                                <li class="webtoon_content">
+                                    <a href="#">
+                                        <img src="image/thumbnail2.jpg" class="webtoon_img" alt=""/>
+                                        <span class="special_toon cut_toon">컷툰</span><strong class="webtoon_title">1인용 기분</strong>
+                                        <span class="webtoon_subtitle">20화 평가</span>
+                                    </a>
+                                </li>
+                                <li class="webtoon_content">
+                                    <a href="#">
+                                        <img src="image/thumbnail2.jpg" class="webtoon_img" alt=""/>
+                                        <strong class="webtoon_title">찬란하지 않아도 괜찮아</strong>
+                                        <span class="webtoon_subtitle">56화 숨길 수 없어요.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
 
-                        <li>
-                            <div class="news_content">
-                                <a href="">&lbrack;펫카드&rbrack; 강아지 중성화가 필요한 이유</a>
-                                <p>&lpar;서울&equals;뉴스1&rpar; 최서윤 기자,방은영 디자이너 &equals; 강아지 중성화 수술을 놓고 찬반이 팽팽하게 엇갈린다. 많은 사람들은 사람들과 공존하려면 개체수 조절을 위해 필요하다고 주장한 다. 그러나 어떤 사람들은 인위적인 수술은 안된다며 반대한다.</p>
-                            </div>
-                        </li>
+    <div class="footer_wrap">
+        <footer>
+            <address class="address_text">주소: 경기도 성남시 분당구. E-MAIL: <a href="mailto:honggildong@naver.com" class="footer_mail">honggildong@naver.com</a></address>
+            <span class="copyright_text">Copyright Ⓒ Hong Gil Dong. All Rights Reserved</span>
+        </footer>
+    </div>
 
-                        <li>
-                            <a href=""><img src="image/thumbnail1.jpg" alt="다이어트에 좋은 여름 복숭아"/></a>
-                            <div class="news_content">
-                                <a href="">다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어</a>
-                                <p>복숭아가 제철이다. 여름 복숭아는 다양한 건강 효과를 낸다. 복숭아에는 포도당, 과당, 수분이 풍부하고 유기산&lpar;산성을 띠는 물질로 식품에서 신맛을 냄&rpar;이 0. 5&percnt; 정도로 적게 들어 단맛이 강하다. 복숭아의 열량은 100g당 36kcal다. 복숭아 한 개에 약 100kcal 정도다. 포만감에 비해 열량이 적은 편이어서 다이어트를 하는 사람에게도 좋다. 비타민이 많아서 피로 해소에 도움이 된다.</p>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <h3>웹툰</h3>
-                    <ul id="webtoon_list" class="border-normal">
-                        <li>
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=644180">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 하루3컷"/>
-                                    <h4>하루 3컷</h4>
-                                    <small>17화 편리하게 피곤하게</small>
-                                </div>
-                            </a>
-
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=651673">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 유미의 세포들"/>
-                                    <span class="txt_cut_toon">컷툰</span><h4>유미의 세포들</h4>
-                                    <small>326화 미래에서 온 텔레파시</small>
-                                </div>
-                            </a>
-                            
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=704595">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 이말년씨리즈 2018" />
-                                    <h4>이말년씨리즈 2018</h4>
-                                    <small>58화 공포의 떡볶이</small>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=119874">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 덴마"/>
-                                    <span class="txt_smart_toon">스마트툰</span><h4>덴마</h4>
-                                    <small>195화 1.다이크&lpar;195&rpar;</small>
-                                </div>
-                            </a>
-
-=======
-                        <dt class="dict_word">프로젝트</dt><div><span class="from_dict">영양학사전</span></div>
-                        <dd class="meaning">연구나 새로운 사업의 개발을 위한 유기적이고 조직적인 계획. 원자력 개발이나 우주개발 등은 대형 프로젝트를 조직하여 이루어진다. 일반적으로는 특정한 목표, 계획을 위한 학습 활동, 실행계획 등을 가리킨다.</dd>
-
-                        <dt class="dict_word">프로젝트</dt><div><span class="from_dict">Basic 중학생을 위한 기술, 가정 용어사전</span></div>
-                        <dd class="meaning">어떤 특정한 목적 달성을 위하여 실시되는 시스템 개발, 프로그램 설계, 연구 개발 계획 혹은 건설 공사 등과 같이 한 번에 그치는 성격을 갖는 단위 작업이나 사업.</dd>
-                    </dl>
-
-                    <h3>실시간 검색어</h3>
-                    <ol id="realtime_search_word" class="border-normal">
-                        <li><a href="https://search.naver.com/search.naver?query=입추">입추</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=런닝맨&nbsp;유재석">런닝맨 유재석</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=런닝맨">런닝맨</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=소나기">소나기</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=주간&nbsp;날씨">주간 날씨</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=깔라만시">깔라만시</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=내&nbsp;아이디는 강남미인">내 아이디는 강남미인</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=차은우">차은우</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=한국사능력검정시험">한국사능력검정시험</a></li>
-                        <li><a href="https://search.naver.com/search.naver?query=맛있는&nbsp;녀석들">맛있는 녀석들</a></li>
-                    </ol>
-
-                    <h3>쿠키 이용안내</h3>
-                    <ul id="cookie_guide" class="border-normal">
-                        <li><em>웹툰 작품</em>은 쿠키를 사용하여 대여/구매 하실 수 있습니다.</li>
-                        <li>쿠키 구매 시 지급되는 보너스 쿠키의 수량은 변경될 수 있으며, <strong>유효기간은 지급 후 90일</strong>입니다.</li>
-                        <li>구매 후 7일 이내, 사용하지 않은 쿠키 패키지는 <a href="#">구매내역</a>에서 직접 구매 취소할 수 있습니다.</li>
-                        <li>일부 사용 후 잔여 쿠키에 대한 구매 취소는 고객센터를 통해 가능하며, 쿠키 구매 시 지급된 보너스 쿠키를 사용한 경우에는 해당 분량을 제외하고 환불됩니다.</li>
-                        <li>쿠키 구매 또는 사용 전 이용약관 동의가 필요합니다.<br/><a href="#">쿠키 이용약관</a></li>
-                    </ul>
-
-                    <h3>뉴스</h3>
-
-                    <ul id="news_list" class="border-normal">
-                        <li>
-                            <a href="#"><img src="image/thumbnail1.jpg" alt="내일도 35도 안팎 폭염, 내륙 소나기"/></a>
-                            <div class="news_content">
-                                <a href="#">&lbrack;날씨&rbrack; 내일도 35도 안팎 폭염・내륙 소나기&hellip;습도 높아 후텁지근</a>
-                                <p>오늘은 입추 절기지만 가을은 아직 멀리있는 것 같습니다. 일부 내륙에는 소나기가 지났지만 소나기도 더위의 기세를 누그러뜨리진 못했는데요. 동해안을 제외한 전국 대부분 지방에 폭염 특보가 이어지는 가운데 내일도 한낮에 서울과 대전 35도, 광주와 대구가 36도까지 오를 것으로 예상됩니다. 내일도 대기가 불안정해지 면서 오후에 내륙에는 소나기가 지나는 곳이 있겠습니다.</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="news_content">
-                                <a href="#">&lbrack;펫카드&rbrack; 강아지 중성화가 필요한 이유</a>
-                                <p>&lpar;서울&equals;뉴스1&rpar; 최서윤 기자,방은영 디자이너 &equals; 강아지 중성화 수술을 놓고 찬반이 팽팽하게 엇갈린다. 많은 사람들은 사람들과 공존하려면 개체수 조절을 위해 필요하다고 주장한 다. 그러나 어떤 사람들은 인위적인 수술은 안된다며 반대한다.</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <a href="#"><img src="image/thumbnail1.jpg" alt="다이어트에 좋은 여름 복숭아"/></a>
-                            <div class="news_content">
-                                <a href="#">다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어</a>
-                                <p>복숭아가 제철이다. 여름 복숭아는 다양한 건강 효과를 낸다. 복숭아에는 포도당, 과당, 수분이 풍부하고 유기산&lpar;산성을 띠는 물질로 식품에서 신맛을 냄&rpar;이 0. 5&percnt; 정도로 적게 들어 단맛이 강하다. 복숭아의 열량은 100g당 36kcal다. 복숭아 한 개에 약 100kcal 정도다. 포만감에 비해 열량이 적은 편이어서 다이어트를 하는 사람에게도 좋다. 비타민이 많아서 피로 해소에 도움이 된다.</p>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <!-- todo li 안에 h 는 쓰지말자 -->
-                    <h3>웹툰</h3>
-                    <ul id="webtoon_list" class="border-normal">
-                        <li>
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=644180">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 하루3컷"/>
-                                    <h4>하루 3컷</h4>
-                                    <small>17화 편리하게 피곤하게</small>
-                                </div>
-                            </a>
-
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=651673">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 유미의 세포들"/>
-                                    <span class="txt_cut_toon">컷툰</span><h4>유미의 세포들</h4>
-                                    <small>326화 미래에서 온 텔레파시</small>
-                                </div>
-                            </a>
-                            
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=704595">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 이말년씨리즈 2018" />
-                                    <h4>이말년씨리즈 2018</h4>
-                                    <small>58화 공포의 떡볶이</small>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=119874">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 덴마"/>
-                                    <span class="txt_smart_toon">스마트툰</span><h4>덴마</h4>
-                                    <small>195화 1.다이크&lpar;195&rpar;</small>
-                                </div>
-                            </a>
-
->>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d:temp/portfolio.html
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=703835">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 1인용 기분"/>
-                                    <span class="txt_cut_toon">컷툰</span><h4>1인용 기분</h4>
-                                    <small>20화 평가</small>
-                                </div>
-                            </a>
-
-                            <a href="https://comic.naver.com/webtoon/list.nhn?titleId=698247">
-                                <div class="webtoon_content">
-                                    <img src="image/thumbnail2.jpg" alt="웹툰 찬란하지 않아도 괜찮아"/>
-                                    <h4>찬란하지 않아도 괜찮아</h4>
-                                    <small>56화 숨길 수 없어요.</small>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </dd>
-            </dl>
-        </div>
-        
-    </main>
-
-    <footer class="font-12px">
-        <address>주소: 경기도 성남시 분당구. E-MAIL&colon; honggildong&commat;naver.com</address>
-        <strong>Copyright &#169; Hong Gil Dong. All Rights Reserved</strong>
-    </footer>
-
-    <script>
-        var year_Arr = []
-        var month_Arr = []
-        var day_Arr = []
-
-        for (var i = 1; i < 90; i++) {
-            year_Arr.push(i+1930)
-            if (i<13) {
-                month_Arr.push(i)
-            }
-            if (i<32) {
-                day_Arr.push(i)
-            }
-        }
-
-        function addYear() {
-            var select_year = document.getElementById("year");
-            for (var i=0; i<year_Arr.length; i++) {
-                var option_year = document.createElement("option");
-                option_year.text = year_Arr[i] + '년';
-                option_year.value = year_Arr[i]
-    
-                select_year.options.add(option_year)
-            }
-        }
-
-        function addMonth() {
-            var select_month = document.getElementById("month");
-            for (var i=0; i<month_Arr.length; i++) {
-                var option_month = document.createElement("option");
-                option_month.text = month_Arr[i] + '월';
-                option_month.value = month_Arr[i]
-                
-                select_month.options.add(option_month)
-            }
-        }
-
-        function addDay() {
-            var select_day = document.getElementById("day");
-            for (var i=0; i<day_Arr.length; i++) {
-                var option_day = document.createElement("option");
-                option_day.text = day_Arr[i] + '일';
-                option_day.value = day_Arr[i]
-                
-                select_day.options.add(option_day)
-            }
-        }
-
-        addYear();
-        addMonth();
-        addDay();
-    </script>
 </body>
 </html>

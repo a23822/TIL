@@ -274,7 +274,7 @@ table {
 
 .radio_cell {
     display: table-cell;
-    width: 123.5px;
+    width: 123px;
 }
 
 .radio_text {
@@ -287,7 +287,6 @@ table {
 }
 
 .tel_box {
-    float: left;
     width: 80%;
 }
 
@@ -296,6 +295,7 @@ table {
 }
 
 .certificate_btn {
+    float: right;
     border: 1px solid #08a600;
     background-color: #4ec53d;
     font-size: 12px;
@@ -312,18 +312,16 @@ table {
 
 .checkbox_cell {
     display: table-cell;
-    width: 12.5%;
-    overflow: hidden;
+    width: 12%;
 }
 
 .textarea_box {
-    resize:none;
-    width: 100%;
+    display: block;
+    width: 869px;
     height: 150px;
     border: 1px solid #d1d1d1;
     font-size: 12px;
-    padding: 5px 0;
-    text-indent: 5px;
+    padding: 5px 0 5px 5px;;
 }
 
 .submit_btn {
@@ -350,14 +348,10 @@ table {
     padding: 30px;
 }
 
-.word_wrap {
+.dict_word {
+    display: block;
     text-align: center;
     margin: 20px 0;
-}
-
-.dict_word {
-    font-style: normal;
-    font-weight: bold;
     font-size: 32px;
 }
 
@@ -365,6 +359,7 @@ table {
     font-size: 14px;
     font-weight: bold;
     line-height: 21px;
+    margin-bottom: 5px;
 }
 
 .from_dict {
@@ -377,7 +372,7 @@ table {
 
 .meaning {
     line-height: 24px;
-    margin: 5px 0 30px 0;
+    margin-bottom: 30px;
 }
 
 .realtime_content {
@@ -412,7 +407,7 @@ table {
     height: 15px;
     margin-right: 10px;
     text-align: center;
-    line-height: 18px;
+    line-height: 13px;
 }
 
 .cookie_guide li {
@@ -424,16 +419,21 @@ table {
     margin-top: 6px;
 }
 
-.cookie_guide .font_1 {
+.cookie_guide .webtoon_font {
     color: #559bfa;
 }
 
-.cookie_guide .font_2 {
+.cookie_guide .webtoon_term {
     color: #ec5336;
+}
+
+.cookie_guide .webtoon_link {
+    color: #559bfa;
 }
 
 .news_wrap {
     list-style-type: none;
+    vertical-align: top;
 }
 
 .news_wrap li + li {
@@ -445,17 +445,19 @@ table {
 .img_wrap {
     float: left;
     margin-right: 15px;
+    vertical-align: top;
 }
 
 .news_content {
-    display: inline;
+    display: block;
 }
 
 .news_title {
+    display: inline-block;
     font-size: 14px;
     color: #00c;
     font-weight: bold;
-    line-height: 28px;
+    margin-bottom: 10px;
 }
 
 .news_img {
@@ -475,7 +477,7 @@ table {
 
 .webtoon_wrap {
     list-style-type: none;
-    display: inline;
+    display: block;
 }
 
 .webtoon_content {
