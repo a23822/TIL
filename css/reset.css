@@ -1,62 +1,45 @@
 @charset "utf-8";
 
-<<<<<<< HEAD
-=======
-/* custom_reset */
-
->>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
-html, body, div, span, object,
-h1, h2, h3, h4, h5, h6, p, pre,
-a, address, del, em, img, q, s,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary {
+/* reset */
+body,
+h1, h2, h3, h4 ,h5, h6,
+ul, ol, dl, dd, p,
+fieldset, legend {
 	margin: 0;
 	padding: 0;
-	border: 0;
-<<<<<<< HEAD
-	font-size: 100%;
-	font: inherit;
-=======
->>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
-	vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+body, input, textarea, select, button {
+	font-size: 14px;
+	font-family: Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
-body {
-    line-height: 1;
-    background-color: #f8f8f8;
-}
-
-ol, ul {
+ul, ol {
 	list-style: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-<<<<<<< HEAD
-}
-=======
+	border-collapse: collapse
 }
 
-.blind {
-    overflow: hidden;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+em {
+	font-style: normal;
 }
 
-/* //custom_reset */
->>>>>>> 88244b1a9ae6ca973982aa4a482ae5e454ac8c2d
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+	vertical-align: top;
+}
+
+fieldset {
+	border: 0;
+}
+/* // reset */
