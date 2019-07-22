@@ -11,6 +11,7 @@ fieldset, legend {
 
 body, input, textarea, select, button {
 	font-size: 14px;
+	line-height: 16px;
 	font-family: Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
