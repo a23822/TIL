@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+    <div class="example_inner">
+        <section class="section_wrap">
+            <div class="header_wrap">
+                <p class="tit">TEXTAREA 샘플</p>
+            </div>
+            <div class="content">
+                <div class="input_wrap">
+                    <div class="input_inner">
+                        <div class="memo">
+                            <textarea class="input_bx" aria-hidden="true"></textarea>
+                            <div class="input_result">
+                                <!-- [D] textarea 내용 입력 -->
+                                <!-- 면세점에서 로이스초콜릿 사기 -->
+                            </div>
+                        </div>
+                        <div class="datetime">2019.10.22</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_wrap">
+            <div class="header_wrap">
+                <p class="tit">TEXTAREA 샘플</p>
+            </div>
+            <div class="content">
+                <div class="input_wrap">
+                    <div class="input_inner">
+                        <div class="memo type_place">
+                            <textarea class="input_bx" aria-hidden="true"></textarea>
+                            <div class="input_result">
+                                <!-- [D] textarea 내용 입력 -->
+                                <!-- 면세점에서 로이스초콜릿 사기 -->
+                            </div>
+                        </div>
+                        <div class="datetime">2019.10.22</div>
+                        <div class="img_area">
+                            <img src="http://ipsumimage.appspot.com/315x136" class="img" alt=""/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- JQuery-->
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous">
+</script>
+<script>
+    $('.section_wrap .input_bx').on('keyup', function(){
+        var input_txt = $(this).val();
+        if (input_txt.length<59){
+            $(this).parent().removeClass('type_fontA');
+            $(this).parent().removeClass('type_fontB');
+            $(this).height(1).height($(this).prop('scrollHeight') + 42);
+        } else if (input_txt.length<86){
+            $(this).parent().addClass('type_fontA');
+            $(this).parent().removeClass('type_fontB');
+            $(this).height(175);
+        } else {
+            $(this).parent().removeClass('type_fontA');
+            $(this).parent().addClass('type_fontB');
+            $(this).height(189);
+        }
+        $(this).parent().find('.input_result').html(input_txt);
+    });
+</script>
+</body>
+</html>
