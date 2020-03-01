@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        ul {
+            list-style: none;
+        }
+
+        .list_wrap .list:last-of-type {
+            color: red;
+        }
+
+        .list:last-of-type {
+            background-color: blue;
+            display: inline-block;
+        }
+
+        .list:first-of-type {
+            color: yellow;
+        }
+
+        .list:first {
+            background-color: yellow;
+        }
+
+        ul .list:first {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list_wrap">
+        <li class="list">
+            1st list
+        </li>
+        <li clsas="list">
+            2nd list
+        </li>
+        <li class="list">
+            3rd list
+        </li>
+        <li class="list">
+            4th list
+        </li>
+    </ul>
+    <div class="list">
+        fake list
+    </div>
+</body>
+</html>
